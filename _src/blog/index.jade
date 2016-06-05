@@ -1,0 +1,14 @@
+- function excerpt(content) {
+  - if(content.indexOf("<!-- more -->") == -1) return content;
+  - else return content.split("<!-- more -->")[0];
+- }
+
+
+h1 Welcome to McFly's blog
+h3 Good night, future boy!
+
+for post, url in public.blog.posts._data
+    hr
+    h2: a(href="/blog/posts/#{ url }")= post.title
+    != excerpt(partial("posts/" + url))
+    a(href="/blog/posts/#{ url }") Read More...

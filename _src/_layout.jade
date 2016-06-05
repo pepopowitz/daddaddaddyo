@@ -1,0 +1,13 @@
+doctype
+html
+    head
+        title= title
+            |  - McFly Watches Movies
+        link(rel="stylesheet" href="/css/main.css")
+    body
+        != partial("_nav")
+
+        .container.content
+            row
+                != yield
+
